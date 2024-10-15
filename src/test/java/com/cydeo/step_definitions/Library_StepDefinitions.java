@@ -35,14 +35,13 @@ public class Library_StepDefinitions {
     }
 
     @When("user enters admin username")
-    public void user_enters_admin_username() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void userEntersAdminUsername() {
+        System.out.println("User enters admin username.");
     }
-    @When("user enters admin password")
-    public void user_enters_admin_password() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @And("user enters admin password")
+    public void userEntersAdminPassword() {
+        System.out.println("User enters admin password.");
     }
 
 
