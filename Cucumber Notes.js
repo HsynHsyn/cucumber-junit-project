@@ -1,4 +1,4 @@
-AGE OBJECT MODEL DESIGN PATTERN (POM)
+*** PAGE OBJECT MODEL DESIGN PATTERN (POM) ****
 
 What is PAGE OBJECT MODEL DESIGN PATTERN?
 - Create a separate .java class for each page of the application.
@@ -531,7 +531,68 @@ similar.
 
 -----------------------------------------------------------------------------------------------------------
 
+		*** BDD IMPLEMENTATION TEMPLATE ***  (imporant)
 
+	- TEMPLATE: Steps to implement a new scenario from the beginning:
+
+		#0- Create a feature file and define the feature and agile story (stories) 
+
+			Feature: Google search functionality
+  					 Agile story: As a user, when I am on the Google search page
+  					 I should be able to search anything and see relevant results
+
+		#1- Create the Scenario and Steps in the .feature file.
+
+				@wip
+  				Scenario: Search result title verification
+			    Given user is on the Google search page
+			    When user searches for apple
+			    Then user should see apple in the title
+
+		#2- Create snippets and add them into 'step_definitions' class
+
+				 @When("user searches for {word}")
+    			 public void user_searches_for_apple(String word) {
+
+        		 googleSearchPage.searchBox.sendKeys(word + Keys.ENTER);
+        		}
+
+			    @Then("user should see {word} in the title")
+			    public void user_should_see_apple_in_the_title(String word) {
+
+			        BrowserUtils.verifyTitle(word+" - Google Search");
+			    }
+
+
+		#3- Start implementing the empty snippets
+
+				@When("user searches for {word}")
+    			 public void user_searches_for_apple(String word) {
+    			 	//empty
+        		}
+
+
+		#4- Create POM design Pages and locate web elements (if not already created)
+
+				//#1- Create the constructor and initialize the driver with object
+				public GoogleSearchPage(){
+        		PageFactory.initElements(Driver.getDriver(), this);
+    			}
+
+			    //#2- Use @FindBy instead of findElement()
+			    @FindBy(name = "q")
+			    public WebElement searchBox;
+
+
+		#5- Create the object in the "step_definitions" class to implement the JAVA+SELENIUM logic
+
+				GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+
+
+		#6- Make sure the scenario is passing.
+
+			-> PASSED
+------------------------------------------------------------------------------------------------------
 
 
 

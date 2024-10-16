@@ -11,7 +11,7 @@ Feature: Google search functionality
     # WINDOWS --> control + Alt + L
     # wip(work in progress)
 
-  @wip
+
   Scenario: Search result title verification
     Given user is on the Google search page
     When user searches for apple
