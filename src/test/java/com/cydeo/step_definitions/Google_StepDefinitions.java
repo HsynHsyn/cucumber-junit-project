@@ -32,6 +32,7 @@ public class Google_StepDefinitions {
     public void user_is_on_the_google_search_page() {
 
         Driver.getDriver().get("https://www.google.com");
+
         try {
             Driver.getDriver().findElement(By.id("L2AGLb")).click();  // Replace with the actual ID if different
         } catch (Exception e) {
