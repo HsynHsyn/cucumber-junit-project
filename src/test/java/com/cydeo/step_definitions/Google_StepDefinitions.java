@@ -24,7 +24,7 @@ public class Google_StepDefinitions {
     @Then("user should see {word} in the title")
     public void user_should_see_apple_in_the_title(String word) {
 
-        BrowserUtils.verifyTitle(word+" - Google Search");
+        BrowserUtils.verifyTitle(word + " - Google Search");
 
     }
 

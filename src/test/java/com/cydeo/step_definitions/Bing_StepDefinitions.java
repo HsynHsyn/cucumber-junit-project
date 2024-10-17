@@ -37,8 +37,8 @@ public class Bing_StepDefinitions {
     public void userShouldSeeInTheTitle(String expectedTitle) {
 
         BrowserUtils.sleep(2);
-        BrowserUtils.verifyTitle(expectedTitle);
-        //BrowserUtils.verifyTitleContains(expectedTitle);
+       // BrowserUtils.verifyTitle(expectedTitle);
+        BrowserUtils.verifyTitleContains(expectedTitle);
 
     }
 

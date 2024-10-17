@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+                //html and rerun plugins are standard in Cucumber.
+                //PrettyReports is not part of Cucumber's default configuration
+                // and requires adding a third-party dependency.
         },
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
