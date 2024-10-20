@@ -17,8 +17,27 @@ public class CRMProfilePage {
     @FindBy(xpath = "//input[@placeholder='Password']")
     public WebElement password;
 
-    @FindBy(css = "input[placeholder='Password']")
-    public WebElement password1;
+    @FindBy(css = "input.login-btn")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//span[@id='user-name']")
+    public WebElement profilePhoto;
+
+    @FindBy(css = ".user-block.user-block-active")
+    public WebElement userBlockActive;
+
+    @FindBy(xpath = "//span[text()='Log out']")
+    public WebElement logoutButton;
+
+    @FindBy(xpath = "//div[@class = 'menu-popup-items']")
+    public WebElement popupMenu;
+
+
+
+
+
+
+
 
 
 

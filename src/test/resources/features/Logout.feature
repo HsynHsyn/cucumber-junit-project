@@ -4,7 +4,7 @@ Feature: CRM logout functionality
   Accounts are: librarian, student, admin
 
   Background: For all scenarios user is on CRM24 page of the library application
-    Given Given user logs in with valid credentials
+    Given user logs in with valid credentials
 
 
   Scenario: user logs out successfully

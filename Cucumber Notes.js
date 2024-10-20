@@ -16,8 +16,7 @@ How are we going to implement POM Design Pattern?
 
 		public LoginPage(){
 			PageFactory.initElements(driver, this);
-		}
-
+		
 	}
 
 
@@ -25,6 +24,18 @@ How are we going to implement POM Design Pattern?
 
 @FindBy(id='locator')
 public WebElement searchBar;
+
+
+	@FindBy(css = "img.user-img")  // CSS: img etiketi ve class değeri 'user-img'
+    public WebElement profilePhoto;
+
+    // Log out butonu için WebElement - CSS ile tanımlama
+    @FindBy(css = "span:contains('Log out')")  // CSS: Log out yazısını içeren span
+    public WebElement logOutButton;
+
+    // Profil adının altında beş seçenek - CSS ile tanımlama
+    @FindBy(css = "div.user-options li")  // CSS: user-options sınıfına sahip div içindeki li elementleri
+    public List<WebElement> profileOptions;
 
 
 ------------------------
@@ -38,6 +49,16 @@ DATA DRIVEN TESTING
 
 - WHAT IS DATA DRIVEN TESTING (DDT)
 	- Executing same tests against different test data.
+
+
+==================================================
+//what is your framework question
+
+My framework uses Cucumber for writing test scenarios and JUnit to run them.
+It follows the Page Object Model (POM) to organize web elements and actions for
+better code management and reusability.
+
+=======================================================
 
 - WHAT IS DATA DRIVEN FRAMEWORK?
 	- DDT Framework is the framework where we are able to read test data from outside of the source code, and execute our tests against different test data.
@@ -127,8 +148,7 @@ DEVELOPMENT TYPES
 
 
 - Is Cucumber a testing tool?
-	- No, the Cucumber is not a testing tool.
-	- *** It is a BDD implementation tool. ***
+	- No, the Cucumber is not a testing tool	- *** It is a BDD implementation tool. ***
 	- It does not come with any testing or programming logic.
 	- It does not have assertions, that's why we are using cucumber with junit: "cucumber-junit"
 	- For programming approach we are using cucumber with java : "cucumber-java"
