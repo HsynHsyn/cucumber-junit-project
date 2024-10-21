@@ -703,11 +703,47 @@ How its going:
 
 ---------------------------------------------------------------------------------------------------------------------------
 
+- TELL ME ABOUT YOUR FRAMEWORK?
+- Basically they want to hear how did you create and structured
+your project, and what did you use in it to make it functional,
+reusable, scalable etc.
+- What tools we used in our project?
+- Which programming language we used in our project?
+- Which testing tools we used in our project?
+- Which development approach we choose in our project?
+- What kind of folder structure you created, and why?
+---------------------------------------------------------------------------------------------------------------------------
 
+*** Abstract ***
 
+- BACKGROUND VS HOOKS
 
+- BACKGROUND:
+	- If we have repeating steps in a feature file, we can group them under "Background:" keyword.
+	- The steps we put under the "Background" keyword, will be a "pre-condition" to ALL of the SCENARIOS in the SAME feature file.
+	- Background is for the "Business Side"
 
+- HOOKS:
+	- We can create "pre" & "post" conditions for any
+	setups, teardowns, creating connections, closing connections, opening files, closing files etc. using HOOKS from Cucumber library.
+	- Unlike Background, this is for the "IMPLEMENTAION SIDE" of the project.
+	- Also this will effect all of the scenarios in the project, UNLESS we specifically create "@tags" to address different	situations.
+	- We can create more than one @Before, @After,	@BeforeStep, @AfterStep methods.
+	- We can change the running order by using "order = 1"	keyword.
+	- The smaller the number, the earlier will be	executed.
+---------------------------------------------------------------------------------------------------------------------------
 
+--------------------------------------------------
+PARAMETERIZATION
+- Parameterization is being able to pass test data from the feature files.
+- We can pass Java or non-Java data.
+- Java: String, int, float, double ...
+- Non-java : {word}
+- We can even create our own object types to pass them from feature files.
+- Also known as CUCUMBER EXPRESSIONS.
+- We can pass more than 1 data in 1 step. We are not limited. It will just be passed as additional argument 
+  in the step_definition method.
+--------------------------------------------------
 
 
 
