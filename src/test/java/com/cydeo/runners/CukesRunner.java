@@ -8,12 +8,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "html:target/cucumber-reports.html",
-                "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+                "rerun:target/rerun.txt"
+        },
                 //html and rerun plugins are standard in Cucumber.
                 //PrettyReports is not part of Cucumber's default configuration
                 // and requires adding a third-party dependency.
-        },
+
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false,

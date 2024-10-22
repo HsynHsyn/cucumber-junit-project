@@ -49,7 +49,7 @@ Feature: Some of the general functionality verifications
     And user clicks to process order button
     Then user should see "<expectedName>" in the first row of the web table
 
-    Examples:
+    Examples: #if we do not provide Examples: it will not  be executed
 
       | quantity | customerName | street | city | state | zip   | paymentType | cardNumber       | expDate | expectedName |
       | 3        | John Doe     | 7th st | NY   | NY    | 99999 | Visa        | 1111222233334444 | 12/25   | John Doe     |
