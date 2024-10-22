@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class WT_OrderPage {
+public class WT_OrderPage extends WT_BasePage{
 
     public WT_OrderPage(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -25,7 +25,7 @@ public class WT_OrderPage {
     @FindBy(xpath = "//input[@value='American Express']")
     public WebElement americanExpressRadioButton;
 
-    @FindBy(name = "card")
+     @FindBy(name = "card")
     public List<WebElement> cardTypes;
 
     @FindBy(name = "quantity")
