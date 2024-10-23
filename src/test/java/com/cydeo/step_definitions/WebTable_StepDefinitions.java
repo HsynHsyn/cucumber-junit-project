@@ -10,13 +10,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import org.w3c.dom.stylesheets.LinkStyle;
 
-import java.awt.*;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.BrokenBarrierException;
 
 public class WebTable_StepDefinitions {
 

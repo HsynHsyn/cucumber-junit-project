@@ -4,11 +4,9 @@ import com.cydeo.pages.CRMProfilePage;
 
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
 
 public class CRMLogout_StepDefinition {
